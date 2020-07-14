@@ -1,4 +1,4 @@
-// This process can be easily automate using tools like integromat. Testing scripts for practicing purposes
+// This process can be easily automated using tools like integromat. Testing scripts for practicing purposes
 
 // https://stackoverflow.com/questions/2705583/how-to-simulate-a-click-with-javascript
 function eventFire(el, etype){
