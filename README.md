@@ -1,7 +1,12 @@
 # pocketSelectAll
 Add the ability to select all [Pocket](https://app.getpocket.com/) articles. This process can be easily automated using tools like [Integromat](https://www.integromat.com/) but I'll test custom JS scripts for practicing purposes.
 
-Will try to implement a button to make it usable but for now you need to copy the `script.js` code and paste it into the console after enabling bulk edit and it will select all visible articles (currently around 25). 
+I'll implement easier ways to use this but for now you'd need to follow this simple steps:
+
+1. Enable the bulk edit option within Pocket.
+2. Copy the `script.js` code and paste it into your browser's console (F12 or Menu -> Dev tools) and press `Enter`.
+   
+This will select all visible articles (currently around 25). If you want to select more you can scroll down and paste the code again or use the `up` arrow on your keyboard to bring up the last input and press `Enter` again.
 
 ![console behaviour gif](console_b.gif)
 
