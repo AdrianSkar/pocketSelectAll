@@ -4,11 +4,12 @@ Add the ability to select all [Pocket](https://app.getpocket.com/) articles. Thi
 I'll implement easier ways to use this but for now you'd need to follow this simple steps:
 
 1. Enable the bulk edit option within Pocket.
+		![bulk edit button image](images/bulk_edit.png)
 2. Copy the `script.js` code and paste it into your browser's console (F12 or Menu -> Dev tools) and press `Enter`.
    
-This will select all visible articles (currently around 25). If you want to select more you can scroll down and paste the code again or use the `up` arrow on your keyboard to bring up the last input and press `Enter` again.
+This will show a button allowing you to select all visible articles (Pocket currently only shows around 25 at a time). If you want to select more you can scroll down and click the button again.
 
-![console behaviour gif](console_b.gif)
+![Select visible button screenshot](images/selectVisible.png)
 
 ### - Refs:
 
