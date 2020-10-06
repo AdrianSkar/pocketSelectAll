@@ -14,7 +14,9 @@ This will show a couple of buttons allowing you to select all visible articles (
 When using the *Select all* option the script will select all visible articles, scroll down and wait 2 seconds for the new batch to load (showing *working...* within the button) until it finds no more articles to select (showing *done* within the button).
 
 ### Notes:
-- The *Select all* script has been tested to work properly down to 1mb speeds, if you have a slower connection try raising the interval time at line 63 (`timer` function) 
+- The *Select all* script has been tested to work properly down to 1mb speeds, if you have a slower connection try raising the interval time at line 63 (`timer` function).
+- If you don't want to paste the script every time you visit the page again, you can take advantage of tools like [Violentmonkey](https://violentmonkey.github.io/) and load it from this [file](vm_pocketSelectAll.js) or install it directly from [greasyfork](https://greasyfork.org/en/scripts/412592-pocketselectall).
+  
 ### - Refs:
 
 - Inspired in part by [this Greasy Fork script](https://greasyfork.org/en/scripts/39554-pocket-select-all).
