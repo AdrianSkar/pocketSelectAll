@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        New script - getpocket.com
+// @name        pocketSelectAll
 // @namespace   Violentmonkey Scripts
 // @match       https://app.getpocket.com/*
 // @grant       none
