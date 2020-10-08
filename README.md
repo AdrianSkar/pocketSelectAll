@@ -1,7 +1,9 @@
 # pocketSelectAll
 Add the ability to select all [Pocket](https://app.getpocket.com/) articles. This process can be easily automated using tools like [Integromat](https://www.integromat.com/) but I'll test custom JS scripts for practicing purposes.
 
-I'll implement easier ways to use this but for now you'd need to follow this simple steps:
+If you are familiar with userscripts<sup><a href="u1">[1]</a></sup><sup><a href="u2">[2]</a></sup>, you can just copy and load it to your favorite manager<sup><a href="u3">[3]</a></sup> such as [Violentmonkey](https://violentmonkey.github.io/) from this [file](vm_pocketSelectAll.js) or install it directly from [greasyfork](https://greasyfork.org/en/scripts/412592-pocketselectall).
+
+If you just want to try it on your browser you can follow this simple steps:
 
 1. Enable the bulk edit option within Pocket.<br>
 		![bulk edit button image](images/bulk_edit.png)
@@ -15,7 +17,9 @@ When using the *Select all* option the script will select all visible articles, 
 
 ### Notes:
 - The *Select all* script has been tested to work properly down to 1mb speeds, if you have a slower connection try raising the interval time at line 63 (`timer` function).
-- If you don't want to paste the script every time you visit the page again, you can take advantage of tools like [Violentmonkey](https://violentmonkey.github.io/) and load it from this [file](vm_pocketSelectAll.js) or install it directly from [greasyfork](https://greasyfork.org/en/scripts/412592-pocketselectall).
-- Inctructions for [selecting with Integromat](./integromat.md).
+- Instructions for [selecting with Integromat](./integromat.md).
   
-
+### Refs:
+- <a name='u1' href="https://en.wikipedia.org/wiki/Userscript">"Userscript". *Wikipedia*.</a>
+- <a name='u2' href="https://openuserjs.org/about/Userscript-Beginners-HOWTO">"Userscript beginners how to". *OpenUserJS*.</a>
+- <a name='u3' href="https://en.wikipedia.org/wiki/Userscript_manager">"Userscript manager". *Wikipedia*.</a>
