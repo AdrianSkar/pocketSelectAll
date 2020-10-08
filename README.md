@@ -1,7 +1,7 @@
 # pocketSelectAll
 Add the ability to select all [Pocket](https://app.getpocket.com/) articles. This process can be easily automated using tools like [Integromat](https://www.integromat.com/) but I'll test custom JS scripts for practicing purposes.
 
-If you are familiar with userscripts<sup><a href="u1">[1]</a></sup><sup><a href="u2">[2]</a></sup>, you can just copy and load it to your favorite manager<sup><a href="u3">[3]</a></sup> such as [Violentmonkey](https://violentmonkey.github.io/) from this [file](vm_pocketSelectAll.js) or install it directly from [greasyfork](https://greasyfork.org/en/scripts/412592-pocketselectall).
+If you are familiar with userscripts<sup><a href="u1">[[1]](#1)</a></sup><sup><a href="u2">[[2]](#2)</a></sup>, you can just copy and load it to your favorite manager<sup>[[3]](#3)</sup> such as [Violentmonkey](https://violentmonkey.github.io/) from this [file](vm_pocketSelectAll.js) or install it directly from [greasyfork](https://greasyfork.org/en/scripts/412592-pocketselectall).
 
 If you just want to try it on your browser you can follow this simple steps:
 
@@ -20,6 +20,6 @@ When using the *Select all* option the script will select all visible articles, 
 - Instructions for [selecting with Integromat](./integromat.md).
   
 ### Refs:
-- <a name='u1' href="https://en.wikipedia.org/wiki/Userscript">"Userscript". *Wikipedia*.</a>
-- <a name='u2' href="https://openuserjs.org/about/Userscript-Beginners-HOWTO">"Userscript beginners how to". *OpenUserJS*.</a>
-- <a name='u3' href="https://en.wikipedia.org/wiki/Userscript_manager">"Userscript manager". *Wikipedia*.</a>
+1. <a id="1" href="https://en.wikipedia.org/wiki/Userscript">"Userscript". *Wikipedia*.</a>
+2. <a id="2" href="https://openuserjs.org/about/Userscript-Beginners-HOWTO">"Userscript beginners how to". *OpenUserJS*.</a>
+3. <a id="3" href="https://en.wikipedia.org/wiki/Userscript_manager">"Userscript manager". *Wikipedia*.</a>
