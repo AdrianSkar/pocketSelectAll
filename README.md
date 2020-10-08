@@ -13,7 +13,7 @@ This will show a couple of buttons allowing you to select all visible articles (
 
 ![Select visible button screenshot](images/buttons.png)
 
-When using the *Select all* option the script will select all visible articles, scroll down and wait 2 seconds for the new batch to load (showing *working...* within the button) until it finds no more articles to select (showing *done* within the button).
+When using the *Select all* option the script will select all visible articles, scroll down and wait 2 seconds for the new batch to load (showing *working...* within the button) until it finds no more articles to select (showing *selected* within the button).
 
 ### Notes:
 - The *Select all* script has been tested to work properly down to 1mb speeds, if you have a slower connection try raising the interval time at line 63 (`timer` function).
@@ -21,5 +21,5 @@ When using the *Select all* option the script will select all visible articles, 
   
 ### Refs:
 1. <a id="1" href="https://en.wikipedia.org/wiki/Userscript">"Userscript". *Wikipedia*.</a>
-2. <a id="2" href="https://openuserjs.org/about/Userscript-Beginners-HOWTO">"Userscript beginners how to". *OpenUserJS*.</a>
+2. <a id="2" href="https://openuserjs.org/about/Userscript-Beginners-HOWTO">"Userscript beginners how-to". *OpenUserJS*.</a>
 3. <a id="3" href="https://en.wikipedia.org/wiki/Userscript_manager">"Userscript manager". *Wikipedia*.</a>
