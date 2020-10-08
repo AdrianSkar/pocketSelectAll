@@ -3,9 +3,9 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://app.getpocket.com/*
 // @grant       none
-// @version     1.0
+// @version     1.1
 // @author      AdrianSkar
-// @description 10/6/2020, 4:45:17 PM
+// @description 8/Oct/2020
 // ==/UserScript==
 
 (function () {
@@ -16,15 +16,13 @@
 
 			setTimeout(() => {// Pocket loads content (including buttons) asynchronously
 				let selectVis = function () {
-					// https://stackoverflow.com/questions/2705583/how-to-simulate-a-click-with-javascript
-					function eventFire(el, etype) {
-						if (el.fireEvent) {
-							el.fireEvent('on' + etype);
-						} else {
-							let evObj = document.createEvent('Events');
-							evObj.initEvent(etype, true, false);
-							el.dispatchEvent(evObj);
-						}
+					function eventFire(el) {
+						let evt = new MouseEvent("click", {
+							view: window,
+							bubbles: true,
+							cancelable: true,
+						});
+						el.dispatchEvent(evt);
 					}
 					//svg
 					let target = document.getElementsByTagName("use");
@@ -64,7 +62,7 @@
 
 					function scrollEnd() {
 						if (last.getAttribute('xlink:href').indexOf("CheckOpen") === -1) {
-							selAll.textContent = 'Done';
+							selAll.textContent = 'Selected';
 							console.log('done');
 							clearInterval(timer);
 							selectVis();
