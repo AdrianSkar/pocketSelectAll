@@ -28,14 +28,14 @@ let selectVis = function () {
 };
 
 //prepend buttons before the close bulk edit one
-let bulk = document.querySelector("button[aria-label='Close Bulk Edit']"),
-	selVis = bulk.cloneNode(),
-	selAll = bulk.cloneNode();
+let bulk = document.querySelector("button[aria-label='Close Bulk Edit']");
+let selVis = bulk.cloneNode();
+let selAll = bulk.cloneNode();
 
 selVis.textContent = 'Select visible';
 selAll.textContent = 'Select all';
-selVis.setAttribute('margin-right', '1em'); // todo: fix; not working
-selAll.setAttribute('margin-right', '1em');
+selVis.setAttribute('style', 'margin-right: 0.5em;');
+selAll.setAttribute('style', 'margin-right: 0.5em;');
 
 bulk.parentElement.prepend(selVis);
 bulk.parentElement.prepend(selAll);
