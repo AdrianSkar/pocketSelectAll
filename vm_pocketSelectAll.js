@@ -3,9 +3,9 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://app.getpocket.com/*
 // @grant       none
-// @version     1.1
+// @version     1.2
 // @author      AdrianSkar
-// @description 8/Oct/2020
+// @description 9/Oct/2020
 // ==/UserScript==
 
 (function () {
@@ -32,7 +32,7 @@
 						// check if targets are selectable articles
 						if ((target[i].getAttribute('xlink:href').indexOf("CheckOpen") > -1)) {
 							//click on them
-							eventFire(target[i], 'click');
+							eventFire(target[i]);
 						}
 						else {
 							// console.log(target[i], 'is not clickable'); 
@@ -40,18 +40,29 @@
 					}
 
 				};
-				console.log(' close bulk');
+				// console.log(' close bulk');
+
 				//prepend buttons before the close bulk edit one
+				//prepend buttons before the close bulk edit one
+				let responsiveX = document.querySelector('[*|href*="CloseX"]'); // X button on responsive 
+
 				let bulk = document.querySelector("button[aria-label='Close Bulk Edit']");
-				console.log(bulk);
 				let selVis = bulk.cloneNode();
 				let selAll = bulk.cloneNode();
 
 				selVis.textContent = 'Select visible';
 				selAll.textContent = 'Select all';
-				selVis.setAttribute('margin-right', '1em'); // todo: fix; not working
-				selAll.setAttribute('margin-right', '1em');
 
+				//load styles depending on responsive or desktop version
+				if (responsiveX) {
+					let styleRes = 'margin-right: 0.5em; min-width: 4em; font-size: 0.8em; border: 1px solid lightgray; border-radius: 4px;';
+					selVis.setAttribute('style', styleRes);
+					selAll.setAttribute('style', styleRes);
+				} else {
+					let styleDes = 'margin-right: 0.5em;';
+					selVis.setAttribute('style', styleDes);
+					selAll.setAttribute('style', styleDes);
+				}
 				bulk.parentElement.prepend(selVis);
 				bulk.parentElement.prepend(selAll);
 
@@ -63,7 +74,7 @@
 					function scrollEnd() {
 						if (last.getAttribute('xlink:href').indexOf("CheckOpen") === -1) {
 							selAll.textContent = 'Selected';
-							console.log('done');
+							// console.log('done');
 							clearInterval(timer);
 							selectVis();
 						}

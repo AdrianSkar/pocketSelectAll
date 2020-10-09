@@ -28,15 +28,25 @@ let selectVis = function () {
 };
 
 //prepend buttons before the close bulk edit one
+let responsiveX = document.querySelector('[*|href*="CloseX"]'); // X button on responsive 
+
 let bulk = document.querySelector("button[aria-label='Close Bulk Edit']");
 let selVis = bulk.cloneNode();
 let selAll = bulk.cloneNode();
 
 selVis.textContent = 'Select visible';
 selAll.textContent = 'Select all';
-selVis.setAttribute('style', 'margin-right: 0.5em;');
-selAll.setAttribute('style', 'margin-right: 0.5em;');
 
+//load styles depending on responsive or desktop version
+if (responsiveX) {
+	let styleRes = 'margin-right: 0.5em; min-width: 4em; font-size: 0.8em; border: 1px solid lightgray; border-radius: 4px;';
+	selVis.setAttribute('style', styleRes);
+	selAll.setAttribute('style', styleRes);
+} else {
+	let styleDes = 'margin-right: 0.5em;';
+	selVis.setAttribute('style', styleDes);
+	selAll.setAttribute('style', styleDes);
+}
 bulk.parentElement.prepend(selVis);
 bulk.parentElement.prepend(selAll);
 
@@ -48,7 +58,7 @@ let selectAll = function () {
 	function scrollEnd() {
 		if (last.getAttribute('xlink:href').indexOf("CheckOpen") === -1) {
 			selAll.textContent = 'Selected';
-			console.log('done');
+			// console.log('done');
 			clearInterval(timer);
 			selectVis();
 		}
@@ -56,7 +66,7 @@ let selectAll = function () {
 			selectVis();
 			last.scrollIntoView();
 			selAll.textContent = 'working...';
-			console.log('scrolling');
+			// console.log('scrolling');
 		}
 	}
 	let timer = setInterval(() => {
