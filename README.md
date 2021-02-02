@@ -1,4 +1,10 @@
 # pocketSelectAll
+
+## Update:
+Finally Pocket has added the ability to select multiple articles by using Ctrl and Shift keys so this script is no longer needed and will be archived. 
+
+-----------------------
+
 Add the ability to select all [Pocket](https://app.getpocket.com/) articles. This process can be easily automated using tools like [Integromat](https://www.integromat.com/) but I'll test custom JS scripts for practicing purposes.
 
 If you are familiar with userscripts<sup><a href="u1">[[1]](#1)</a></sup><sup><a href="u2">[[2]](#2)</a></sup>, you can just copy and load it to your favorite manager<sup>[[3]](#3)</sup> such as [Violentmonkey](https://violentmonkey.github.io/) from this [file](vm_pocketSelectAll.js) or install it directly from [greasyfork](https://greasyfork.org/en/scripts/412592-pocketselectall).
